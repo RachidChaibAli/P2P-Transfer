@@ -83,16 +83,16 @@ Sent when a client action fails validation or cannot be completed.
 ```json
 {
   "type": "error",
-  "code": "PEER_NOT_FOUND",
-  "message": "Target peer is offline or unavailable"
+  "code": "PEER_UNAVAILABLE",
+  "message": "Peer is offline, busy, or unavailable"
 }
 ```
 
 Common error codes:
-- `PEER_NOT_FOUND`: Target display name or session ID not found.
-- `PEER_BUSY`: Target peer is currently in another connection or has a pending request.
+- `PEER_UNAVAILABLE`: Target peer is offline, busy, in another session, or unavailable.
 - `INVALID_STATE`: Action not allowed in client's current state.
 - `NOT_PAIRED`: Attempted to send a WebRTC signal without an active pair.
+- `INVALID_MESSAGE`: Malformed message payload or missing required fields.
 
 ---
 
